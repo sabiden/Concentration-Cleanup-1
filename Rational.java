@@ -1,11 +1,11 @@
-//Team Sing Sung
+//Team Sing Sung - Shaik and Sungbin
 //APCS1 pd10
 //HW37 -- Rational Equality
 //2015-11-25
 
 public class Rational {
 
-
+    // Instance Vars
     private int numerator;
     private int denominator;
 
@@ -15,7 +15,7 @@ public class Rational {
     }
 
     public Rational(int n, int d) {
-	if ( d == 0 ) {
+	if ( d == 0 ) { // denominator can't be zero
 	    System.out.println("Nope.");
 	    numerator = 0;
 	    denominator = 1;
@@ -46,7 +46,7 @@ public class Rational {
     }
 
     public void add(Rational s) {
-	if ( denominator == s.denominator ) {
+	if ( denominator == s.denominator ) { // if denominators are equal there is no need for LCD
 	    numerator += s.numerator;
 	}
 	else {
@@ -71,7 +71,7 @@ public class Rational {
 	int min;
 	int max;
 	int stor;
-	if ((numerator == 0) || (denominator == 0)){
+	if ((numerator == 0) || (denominator == 0)){ // if either of them is 0 gcd is automatically 0.
 	    return 0;
 	}
 	else {
